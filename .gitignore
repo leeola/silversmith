@@ -1,0 +1,3 @@
+.agignore
+node_modules
+build
