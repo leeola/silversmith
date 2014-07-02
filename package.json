@@ -1,0 +1,41 @@
+{
+  "name": "silversmith",
+  "version": "0.0.0",
+  "author": "leeolayvar (http://leeo.la/yvar)",
+  "description": "Yet another static site generator.",
+  "keywords": [
+    "static",
+    "site",
+    "generator"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/leeolayvar/silversmith",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leeolayvar/silversmith.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leeolayvar/silversmith/issues"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "silversmith": "./build/bin/silversmith.js"
+  },
+  "scripts": {
+    "build": "./node_modules/gulp/bin/gulp.js --require coffee-script/register build",
+    "prepublish": "./node_modules/gulp/bin/gulp.js --require coffee-script/register build",
+    "test": "./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require should --reporter spec --slow 300",
+    "test-watch": "./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require should --reporter nyan --slow 300 --watch"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "mocha": "^1.19.0",
+    "should": "^3.3.2",
+    "gulp": "^3.6.2",
+    "gulp-insert": "^0.3.0",
+    "gulp-coffee": "^1.4.3"
+  },
+  "dependencies": {
+    "debug": "^1.0.2"
+  }
+}
